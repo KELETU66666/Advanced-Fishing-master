@@ -52,6 +52,7 @@ public class CatchManager implements ICatchManager {
         CATCH_WATER.put(CatchManager::getJungleCondition, CatchManager::getJungleCatch);
         CATCH_WATER.put(CatchManager::getMushroomCondition, CatchManager::getMushroomCatch);
         CATCH_WATER.put(CatchManager::getDeadCondition, CatchManager::getDeadCatch);
+        CATCH_WATER.put(CatchManager::getPlainOrForestCondition, CatchManager::getPlainCatch);
     }
 
     @Override
@@ -179,6 +180,10 @@ public class CatchManager implements ICatchManager {
         return biomeTypesList.contains(BiomeDictionary.Type.DEAD);
     }
 
+    public static boolean getPlainOrForestCondition(World world, BlockPos pos, Biome biome, Set<BiomeDictionary.Type> biomeTypesList, float luck) {
+        return biomeTypesList.contains(BiomeDictionary.Type.PLAINS) || biomeTypesList.contains(BiomeDictionary.Type.FOREST);
+    }
+
     public static List<ItemStack> getOceanCatch(World world, BlockPos pos, Biome biome, Set<BiomeDictionary.Type> biomeTypesList, float luck) {
         if (biome == Biomes.DEEP_OCEAN) {
             return getCatch(world, LootTables.FISHING_OCEAN_DEEP, luck);
@@ -217,6 +222,10 @@ public class CatchManager implements ICatchManager {
 
     public static List<ItemStack> getDeadCatch(World world, BlockPos pos, Biome biome, Set<BiomeDictionary.Type> biomeTypesList, float luck) {
         return getCatch(world, LootTables.FISHING_DEAD, luck);
+    }
+
+    public static List<ItemStack> getPlainCatch(World world, BlockPos pos, Biome biome, Set<BiomeDictionary.Type> biomeTypesList, float luck) {
+        return getCatch(world, LootTables.FISHING_PLAIN, luck);
     }
 
     public static List<ItemStack> getLavaCatch(World world, BlockPos pos, float luck) {

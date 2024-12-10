@@ -1,7 +1,7 @@
 {
      "pools": [
          {
-             "name": "fishing_tier_4",
+             "name": "fishing_plain_tier_2",
              "rolls": 1,
              "entries": [
                  {
@@ -10,17 +10,11 @@
                      "functions": [
                          {
                              "function": "set_data",
-                             "data": 16
+                             "data": 43
                          }
                      ],
-                     "weight": 90,
-                     "entryName": "EXPLOSIVE_CRUCIAN"
-                 },
-                 {
-                     "type": "item",
-                     "name": "advanced-fishing:frog_leg",
-                     "weight": 10,
-                     "entryName": "FROG_LEG"
+                     "weight": 100,
+                     "entryName": "OAK_FISH"
                  }
              ]
          }

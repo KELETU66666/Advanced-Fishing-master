@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "name": "fishing_plain_tier_1",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "advanced-fishing:fish",
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 44
+            }
+          ],
+          "weight": 100,
+          "entryName": "DIRT_FISH"
+        }
+      ]
+    }
+  ]
+}

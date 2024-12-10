@@ -83,6 +83,11 @@ public class LootTables {
     public static final ResourceLocation FISHING_DEAD_TREASURE = new ResourceLocation(ModInfo.ID, "gameplay/fishing/dead/treasure");
 
 
+    public static final ResourceLocation FISHING_PLAIN = new ResourceLocation(ModInfo.ID, "gameplay/fishing_plain");
+    public static final ResourceLocation FISHING_PLAIN_TIER1 = new ResourceLocation(ModInfo.ID, "gameplay/fishing/plain/tier_1");
+    public static final ResourceLocation FISHING_PLAIN_TIER2 = new ResourceLocation(ModInfo.ID, "gameplay/fishing/plain/tier_2");
+    public static final ResourceLocation FISHING_PLAIN_TIER3 = new ResourceLocation(ModInfo.ID, "gameplay/fishing/plain/tier_3");
+
     public static final ResourceLocation INJECT_NETHER_BRIDGE = new ResourceLocation(ModInfo.ID, "inject/nether_bridge");
 
     public static void registration() {
@@ -153,6 +158,12 @@ public class LootTables {
         LootTableList.register(FISHING_DEAD_TIER2);
         LootTableList.register(FISHING_DEAD_TIER3);
         LootTableList.register(FISHING_DEAD_TREASURE);
+
+
+        LootTableList.register(FISHING_PLAIN);
+        LootTableList.register(FISHING_PLAIN_TIER1);
+        LootTableList.register(FISHING_PLAIN_TIER2);
+        LootTableList.register(FISHING_PLAIN_TIER3);
     }
 
     public static void inject(LootTableLoadEvent event) {
